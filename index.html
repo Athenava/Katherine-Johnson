@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Katherine Johnson - Präsentation</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f4f9; color: #333; }
-        section { background: white; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2 { color: #1a365d; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background: #000000 url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600') no-repeat center center fixed; background-size: cover; color: #333; }
+        section { background: rgba(255, 255, 255, 0.95); padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        h1, h2, summary { color: #ffffff; }
         img { max-width: 100%; height: auto; border-radius: 4px; margin-top: 15px; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
@@ -14,38 +14,44 @@
 </head>
 <body>
 
-    <section>
-        <h1>Katherine Johnson</h1>
-        <p>Eine Pionierin der Mathematik und Raumfahrt</p>
-    </section>
+    <div>
+        <h1 style="color: #ffffff;">Katherine Johnson</h1>
+        <p style="color: #ffffff;">Eine Pionierin der Mathematik und Raumfahrt</p>
+    </div>
 
-    <section>
-        <h2>Kurze Biografie</h2>
-        <p><strong>Geboren:</strong> 26. August 1918 in White Sulphur Springs, West Virginia</p>
-        <p><strong>Verstorben:</strong> 24. Februar 2020 in Newport News, Virginia</p>
-        <p><strong>Eltern:</strong> Joylette und Joshua Coleman</p>
-        <p><strong>Geschwister:</strong> Charles, Margaret und Horace</p>
-        <p><strong>Familie:</strong> Johnson hatte drei Töchter und war zweimal verheiratet. Ihr erster Ehemann, James Goble, starb 1956. 1959 heiratete sie James A. Johnson.</p>
-        <p>Katherine war schon als Kind sehr gut in Mathematik. Sie arbeitete ab 1953 als Mathematikerin bei der NASA (damals noch NACA) und berechnete schwierige Flugbahnen für Raketen.</p>
-    </section>
+    <details>
+        <summary><h2>Kurze Biografie</h2></summary>
+        <section>
+            <p><strong>Geboren:</strong> 26. August 1918 in White Sulphur Springs, West Virginia</p>
+            <p><strong>Verstorben:</strong> 24. Februar 2020 in Newport News, Virginia</p>
+            <p><strong>Eltern:</strong> Joylette und Joshua Coleman</p>
+            <p><strong>Geschwister:</strong> Charles, Margaret und Horace</p>
+            <p><strong>Familie:</strong> Johnson hatte drei Töchter und war zweimal verheiratet. Ihr erster Ehemann, James Goble, starb 1956. 1959 heiratete sie James A. Johnson.</p>
+            <p>Katherine war schon als Kind sehr gut in Mathematik. Sie arbeitete ab 1953 als Mathematikerin bei der NASA (damals noch NACA) und berechnete schwierige Flugbahnen für Raketen.</p>
+        </section>
+    </details>
 
-    <section>
-        <h2>Wichtigste Beiträge bei der NASA</h2>
-        <ul>
-            <li><strong>Beginn:</strong> Johnson trat 1953 in die NACA ein, die später in NASA umbenannt wurde.</li>
-            <li><strong>Erster bemannter Flug:</strong> Sie berechnete die Flugbahn für den ersten US-Raumflug im Jahr 1961.</li>
-            <li><strong>John Glenns Erdumrundung:</strong> 1962 vertraute der Astronaut John Glenn nur den manuellen Berechnungen von Katherine Johnson, auch als der Computer die Daten berechnet hatte.</li>
-            <li><strong>Apollo 11:</strong> Sie half dabei, den Weg für die erste Landung auf dem Mond im Jahr 1969 zu berechnen.</li>
-            <li><strong>Auszeichnungen:</strong> Präsidentenmedaille für Freiheit 2015 durch Barack Obama.</li>
-            <li><strong>Namensgebungen:</strong> Mehrere Einrichtungen, darunter das Katherine G. Johnson Computational Research Facility bei der NASA.</li>
-        </ul>
-    </section>
+    <details>
+        <summary><h2>Wichtigste Beiträge bei der NASA</h2></summary>
+        <section>
+            <ul>
+                <li><strong>Beginn:</strong> Johnson trat 1953 in die NACA ein, die später in NASA umbenannt wurde.</li>
+                <li><strong>Erster bemannter Flug:</strong> Sie berechnete die Flugbahn für den ersten US-Raumflug im Jahr 1961.</li>
+                <li><strong>John Glenns Erdumrundung:</strong> 1962 vertraute der Astronaut John Glenn nur den manuellen Berechnungen von Katherine Johnson, auch als der Computer die Daten berechnet hatte.</li>
+                <li><strong>Apollo 11:</strong> Sie half dabei, den Weg für die erste Landung auf dem Mond im Jahr 1969 zu berechnen.</li>
+                <li><strong>Auszeichnungen:</strong> Präsidentenmedaille für Freiheit 2015 durch Barack Obama.</li>
+                <li><strong>Namensgebungen:</strong> Mehrere Einrichtungen, darunter das Katherine G. Johnson Computational Research Facility bei der NASA.</li>
+            </ul>
+        </section>
+    </details>
 
-    <section>
-        <h2>Warum sie ein Vorbild ist</h2>
-        <p>Katherine Johnson musste gegen zwei große Hürden ankämpfen: Sie war eine Frau und Afroamerikanerin in einer Zeit voller Benachteiligung. Trotzdem hat sie mit ihrem brillianten Kopf und ihrer harten Arbeit die Raumfahrtgeschichte verändert und zeigt bis heute, dass man mit Fleiß alles erreichen kann.</p>
-        <p><strong>Vermächtnis:</strong> Katherine Johnson wird als Pionierin in der Mathematik und Raumfahrt gefeiert und hat viele Frauen in den MINT-Fächern inspiriert.</p>
-    </section>
+    <details>
+        <summary><h2>Warum sie ein Vorbild ist</h2></summary>
+        <section>
+            <p>Katherine Johnson musste gegen zwei große Hürden ankämpfen: Sie war eine Frau und Afroamerikanerin in einer Zeit voller Benachteiligung. Trotzdem hat sie mit ihrem brillianten Kopf und ihrer harten Arbeit die Raumfahrtgeschichte verändert und zeigt bis heute, dass man mit Fleiß alles erreichen kann.</p>
+            <p><strong>Vermächtnis:</strong> Katherine Johnson wird als Pionierin in der Mathematik und Raumfahrt gefeiert und hat viele Frauen in den MINT-Fächern inspiriert.</p>
+        </section>
+    </details>
 
 </body>
 </html>
