@@ -3,29 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Katherine Johnson - Präsentation</title>
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-de], [data-en], [data-es], [data-fr]').forEach(el => {
+                if (el.getAttribute('data-' + lang)) {
+                    el.innerHTML = el.getAttribute('data-' + lang);
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background: #000000 url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600') no-repeat center center fixed; background-size: cover; color: #333; }
-        section { background: rgba(255, 255, 255, 0.95); padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background: #000000 url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600') no-repeat center center fixed; background-size: cover; color: #333; transition: background 0.3s, color 0.3s; }
+        section { background: rgba(255, 255, 255, 0.95); padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: background 0.3s, color 0.3s; }
         h1, h2, summary { color: #ffffff; }
         img { max-width: 100%; height: auto; border-radius: 4px; margin-top: 15px; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
+        .dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
+        .dark-mode section { background: rgba(30, 30, 30, 0.95) !important; color: #e0e0e0 !important; }
+        .dark-mode summary, .dark-mode h2 { color: #bb86fc !important; }
     </style>
 </head>
 <body>
 
-    <div>
-        <h1 style="color: #ffffff;">Katherine Johnson</h1>
-        <p style="color: #ffffff;">Eine Pionierin der Mathematik und Raumfahrt</p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1 style="color: #ffffff;" data-de="Katherine Johnson" data-en="Katherine Johnson">Katherine Johnson</h1>
+            <p style="color: #ffffff;" data-de="Eine Pionierin der Mathematik und Raumfahrt" data-en="A pioneer of mathematics and space travel">Eine Pionierin der Mathematik und Raumfahrt</p>
+        </div>
+        <div style="display: flex; gap: 5px; align-items: center;">
+            <select onchange="setLanguage(this.value)" style="padding: 8px 12px; cursor: pointer; border-radius: 5px; border: none; background: #0066cc; color: white; font-weight: bold;">
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="pt">🇵🇹 Português</option>
+                <option value="nl">🇳🇱 Nederlands</option>
+                <option value="pl">🇵🇱 Polski</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="ar">🇸🇦 العربية</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="tr">🇹🇷 Türkçe</option>
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="uk">🇺🇦 Українська</option>
+                <option value="vi">🇻🇳 Tiếng Việt</option>
+                <option value="el">🇬🇷 Ελληνικά</option>
+                <option value="sv">🇸🇪 Svenska</option>
+                <option value="fi">🇫🇮 Suomi</option>
+            </select>
+            <button onclick="toggleDarkMode()" style="padding: 8px 12px; cursor: pointer; border-radius: 5px; border: none; background: #0066cc; color: white; font-weight: bold;">🌙 Modus</button>
+        </div>
     </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 
     <details>
-        <summary><h2>Kurze Biografie</h2></summary>
+        <summary><h2 data-de="Kurze Biografie" data-en="Short Biography">Kurze Biografie</h2></summary>
         <section>
-            <p><strong>Geboren:</strong> 26. August 1918 in White Sulphur Springs, West Virginia</p>
-            <p><strong>Verstorben:</strong> 24. Februar 2020 in Newport News, Virginia (im stolzen Alter von 101 Jahren)</p>
-            <p><strong>Ehen und Familie:</strong> Katherine war zweimal verheiratet. Ihr erster Ehemann war James Goble (Heirat 1939), mit dem sie drei Töchter bekam (Constance, Joylette und Katherine). Nach dem Tod von James im Jahr 1956 heiratete sie 1959 den Offizier James A. Johnson. Ihre Ehemänner und Kinder unterstützten sie stets bei ihrer Karriere.</p>
-            <p>Katherine war schon als Kind sehr gut in Mathematik. Sie arbeitete ab 1953 als Mathematikerin bei der NASA (damals noch NACA) und berechnete schwierige Flugbahnen für Raketen.</p>
+            <p><strong data-de="Geboren:" data-en="Born:">Geboren:</strong> <span data-de="26. August 1918 in White Sulphur Springs, West Virginia" data-en="August 26, 1918 in White Sulphur Springs, West Virginia">26. August 1918 in White Sulphur Springs, West Virginia</span></p>
+            <p><strong data-de="Verstorben:" data-en="Passed away:">Verstorben:</strong> <span data-de="24. Februar 2020 in Newport News, Virginia (im stolzen Alter von 101 Jahren)" data-en="February 24, 2020 in Newport News, Virginia (at the proud age of 101)">24. Februar 2020 in Newport News, Virginia (im stolzen Alter von 101 Jahren)</span></p>
+            <p><strong data-de="Ehen und Familie:" data-en="Marriages and Family:">Ehen und Familie:</strong> <span data-de="Katherine war zweimal verheiratet. Ihr erster Ehemann war James Goble (Heirat 1939), mit dem sie drei Töchter bekam (Constance, Joylette und Katherine). Nach dem Tod von James im Jahr 1956 heiratete sie 1959 den Offizier James A. Johnson. Ihre Ehemänner und Kinder unterstützten sie stets bei ihrer Karriere." data-en="Katherine was married twice. Her first husband was James Goble (married 1939), with whom she had three daughters (Constance, Joylette, and Katherine). After James' death in 1956, she married officer James A. Johnson in 1959. Her husbands and children always supported her career.">Katherine war zweimal verheiratet. Ihr erster Ehemann war James Goble (Heirat 1939), mit dem sie drei Töchter bekam (Constance, Joylette und Katherine). Nach dem Tod von James im Jahr 1956 heiratete sie 1959 den Offizier James A. Johnson. Ihre Ehemänner und Kinder unterstützten sie stets bei ihrer Karriere.</span></p>
+            <p data-de="Katherine war schon als Kind sehr gut in Mathematik. Sie arbeitete ab 1953 als Mathematikerin bei der NASA (damals noch NACA) und berechnete schwierige Flugbahnen für Raketen." data-en="Katherine was very good at math even as a child. From 1953 she worked as a mathematician at NASA (then NACA) and calculated difficult flight trajectories for rockets.">Katherine war schon als Kind sehr gut in Mathematik. Sie arbeitete ab 1953 als Mathematikerin bei der NASA (damals noch NACA) und berechnete schwierige Flugbahnen für Raketen.</p>
         </section>
     </details>
 
@@ -101,6 +146,45 @@
     </details>
 
     <details>
+        <summary><h2>Alters-Vergleichsrechner</h2></summary>
+        <section>
+            <p>Finde heraus, wie viele Tage du im Vergleich zu Katherine Johnsons 101 Lebensjahren gelebt hast!</p>
+            <label for="birthdate">Dein Geburtsdatum:</label><br>
+            <input type="date" id="birthdate" style="margin: 10px 0; padding: 5px;">
+            <br>
+            <button onclick="calculateDays()">Berechnen</button>
+            <button onclick="resetCalculator()" style="margin-top: 10px; display: none;" id="calc-reset-btn">Zurücksetzen</button>
+            <p id="calc-result" style="margin-top: 15px; font-weight: bold;"></p>
+            <script>
+                function calculateDays() {
+                    const birthdateInput = document.getElementById('birthdate').value;
+                    const result = document.getElementById('calc-result');
+                    if (!birthdateInput) {
+                        result.style.color = 'red';
+                        result.textContent = 'Bitte wähle zuerst ein Geburtsdatum aus!';
+                        return;
+                    }
+                    const birthDate = new Date(birthdateInput);
+                    const today = new Date();
+                    const diffTime = Math.abs(today - birthDate);
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    
+                    const katherineDays = 101 * 365;
+                    result.style.color = '#0066cc';
+                    result.textContent = `Du hast bisher ca. ${diffDays.toLocaleString()} Tage gelebt. Katherine Johnson wurde 101 Jahre alt (ca. ${katherineDays.toLocaleString()} Tage).`;
+                    document.getElementById('calc-reset-btn').style.display = 'block';
+                }
+
+                function resetCalculator() {
+                    document.getElementById('birthdate').value = '';
+                    document.getElementById('calc-result').textContent = '';
+                    document.getElementById('calc-reset-btn').style.display = 'none';
+                }
+            </script>
+        </section>
+    </details>
+
+    <details>
         <summary><h2>Quiz-Bereich</h2></summary>
         <section>
             <p>Teste dein Wissen über Katherine Johnson!</p>
@@ -122,6 +206,12 @@
                 <button onclick="checkAnswer(3, 'Nobelpreis', false)">Nobelpreis für Physik</button>
                 <button onclick="checkAnswer(3, 'Oscar', false)">Oscar für den besten Film</button>
                 <p id="quiz-result-3" style="margin-top: 10px; font-weight: bold;"></p>
+
+                <p><strong>4. Bei welcher berühmten NASA-Mission im Jahr 1969 half sie bei den Berechnungen?</strong></p>
+                <button onclick="checkAnswer(4, 'Apollo', true)">Apollo 11 (Mondlandung)</button>
+                <button onclick="checkAnswer(4, 'Voyager', false)">Voyager 1</button>
+                <button onclick="checkAnswer(4, 'Curiosity', false)">Curiosity Mars-Rover</button>
+                <p id="quiz-result-4" style="margin-top: 10px; font-weight: bold;"></p>
             </div>
             <button onclick="resetQuiz()" style="margin-top: 15px; display: none;" id="reset-btn">Quiz zurücksetzen</button>
             <script>
@@ -138,7 +228,8 @@
                     const results = [
                         document.getElementById('quiz-result-1').textContent,
                         document.getElementById('quiz-result-2').textContent,
-                        document.getElementById('quiz-result-3').textContent
+                        document.getElementById('quiz-result-3').textContent,
+                        document.getElementById('quiz-result-4').textContent
                     ];
                     if (results.every(r => r !== '')) {
                         document.getElementById('reset-btn').style.display = 'block';
@@ -146,7 +237,7 @@
                 }
 
                 function resetQuiz() {
-                    for (let i = 1; i <= 3; i++) {
+                    for (let i = 1; i <= 4; i++) {
                         document.getElementById('quiz-result-' + i).textContent = '';
                     }
                     document.getElementById('reset-btn').style.display = 'none';
